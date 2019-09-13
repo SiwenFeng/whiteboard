@@ -8,6 +8,7 @@ https://www.getpapercss.com/
 add alert  
 add time  
 add shortcut key  
+add download  
 
 # bugs need to be fixed
 review  
