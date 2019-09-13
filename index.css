@@ -1,0 +1,11 @@
+body {
+    background-color: light pink;
+   }
+
+.card{
+    background-color:rgb(250, 250, 231);
+}
+
+#note{
+    font-family: 'Gochi Hand', cursive;
+}
