@@ -1,12 +1,45 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>My OSD600 LAB2</title>
-    </head>
 
-    <body>
-        <!-- This is a comment -->
-        <h1>Hello World!</h1>
-    </body>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Gochi+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <title>My OSD600 LAB2</title>
+</head>
+
+<body>
+    <div class="row flex-center">
+        <div class="card" style="width: 36rem;">
+            <div class="card-body">
+                <h4 class="card-title">WHITEBOARD NOTE</h4>
+                <div id="note" contenteditable></div>
+                <br>
+                <textarea id="nwrite" placeholder="Type Note Here" style="width:617px;height:316px;"
+                    oninput="showNote()"></textarea>
+                <br>
+                <div class="row flex-left">
+                    <button class="sm-2 col" onclick="wipeNote()">WIPE</button>
+                    <button class="sm-2 col" onclick="saveNote()">SAVE</button>
+                    <!-- <button class="sm-2 col" onclick="printNote()">PRINT</button> -->
+                    <div id="wcount" class="row flex-right"></div>
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <div class="row">
+                    <div class="sm-4 col">&copy; SiwenFeng since 2019</div>
+                    <div class="sm-4 col"><a href="https://github.com/SiwenFeng/whiteboard">GitHub</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://unpkg.com/filer/dist/filer.min.js"></script>
+<script src="index.js"></script>
+
 </html>
