@@ -29,8 +29,19 @@ function wipeNote() {
 }
 
 function showNote() {
-    document.querySelector('#wcount').innerHTML = "Word Count: " +
-        (document.getElementById("nwrite").value.split(' ').length - 1);
+    var count = document.getElementById("nwrite").value.trim();
+    count = count.replace(/&nbsp;+/g, "");
+    count = count.replace(/<[^>]*>/g, " ");
+    count = count.replace(/\s+/g, " ");
+    count = count.split(" ");
+    var p = 0;
+    for (var i = 0; i < count.length; i++) {
+        if (count[i] == ""){
+            ++p;
+        }
+    }
+    count = count.length - p;
+    document.getElementById("wcount").innerHTML = "Word Count: " + count; 
 }
 
 function saveNote() {
