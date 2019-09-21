@@ -35,7 +35,7 @@ function showNote() {
 
 function saveNote() {
     fs.writeFile('/note', document.getElementById("nwrite").value, function (err) {
-        if (err) { throw err; }
+        if (err) { alert(err); }
     });
 }
 
