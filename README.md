@@ -1,5 +1,6 @@
 # whiteboard
 A web based note taking app
+https://siwenfeng.github.io/whiteboard/
 
 # css reference
 https://www.getpapercss.com/
@@ -8,8 +9,6 @@ https://www.getpapercss.com/
 add alert  
 add time  
 add shortcut key  
-add download  
 
 # bugs need to be fixed
 review  
-word count  
