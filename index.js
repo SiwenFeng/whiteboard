@@ -30,7 +30,7 @@ function wipeNote() {
 
 function showNote() {
     var count = document.getElementById("nwrite").value.trim();
-    count = count.replace(/&nbsp;+/g, "");
+    count = count.replace(/&nbsp;+/g, " ");
     count = count.replace(/<[^>]*>/g, " ");
     count = count.replace(/\s+/g, " ");
     count = count.split(" ");
