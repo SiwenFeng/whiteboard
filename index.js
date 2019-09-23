@@ -3,25 +3,9 @@ var str = "";
 
 window.addEventListener('DOMContentLoaded', (event) => {
     fs.readFile('/note', 'utf8', function (err, data) {
-        if (err !== null) {
-            str = "Welcome to my note-taking app!"
-        }
-        else if (data !== null) {
-            str = data;
-        }
-        document.querySelector('#note').innerHTML = str;
-        showNote();
+        if (err) if (data) document.querySelector("#note").innerHTML = data;
     })
 });
-
-window.setInterval(() => {
-    saveNote();
-}, 2000);
-
-window.setInterval(() => {
-    showNote();
-}, 500);
-
 function wipeNote() {
     document.querySelector('#note').innerHTML = "";
     document.getElementById("nwrite").value = "";
@@ -35,10 +19,14 @@ function showNote() {
 
 function saveNote() {
     fs.writeFile('/note', document.getElementById("nwrite").value, function (err) {
-        if (err) { throw err; }
+        if (err) { alert(err)}
     });
 }
-
-function printNote() {
-
+function downloadNote() {
+    let file = new File(
+        [document.getElementById("nwrite").value],
+        "notes.txt",
+        { type: "text/plain;charset=utf-8" }
+      );
+      saveAs(file);
 }
